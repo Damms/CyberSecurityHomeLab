@@ -6,6 +6,7 @@ This HomeLab was designed by Day [@Cyberwox](https://cyberwoxacademy.com/).
 
 
 ![image](https://github.com/user-attachments/assets/8406140f-6445-4ae7-a803-72a7c5e3d1dc)
+
 _Reference: HomeLab Network Design & Topology_
 
 
