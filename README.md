@@ -273,4 +273,43 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     2. Enter the following configuration to use pfSense as the default gateway.
 
 
+### Part 6: Configuring Windows 10 Desktop & Adding a User to the AD Domain
+
+1. **Objective**: Add 2 Windows 10 desktops to the Domain and complete the Active Directory lab. Note: Having 2 desktops is not mandatory; one desktop is sufficient.
+
+2. **Download**:
+    - Download the Windows 10 Evaluation Copy.
+
+3. **Windows 10 Installation**:
+    1. Install Windows 10 in VMware with defaults.
+    2. Skip the product key step by clicking Next.
+    3. Name the virtual machine after the first user set in your Domain Controller.
+    4. Change the Network Adapter to Vmnet3 at the end of the installation.
+    5. Uncheck “Power on this virtual machine after creation”.
+    6. Edit virtual machine settings and remove the Floppy drive.
+    7. Repeat the process for the second user.
+
+4. **Configuration Steps**:
+    1. Install Windows 10:
+        - Accept license terms.
+        - Choose Custom Install.
+        - Select New > Apply > OK > Next.
+    2. Configure Windows 10:
+        - Select “I don’t have internet”.
+        - Continue with limited setup.
+        - Set the first user and password (from the DC configuration).
+        - Set security answers.
+        - Uncheck all privacy settings and select Accept.
+        - Choose “Not Now” for Cortana.
+    3. Set up the second desktop with the second user account credentials using the same configurations.
+
+5. **Change PC Name**:
+    1. Search “pc name” and change the PC Name according to the designated users.
+    2. Restart the PC.
+
+6. **Completion**:
+    - The Windows 10 desktops are now configured and added to the Active Directory domain.
+
+
+
 
