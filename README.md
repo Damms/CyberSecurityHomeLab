@@ -138,3 +138,29 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
 9. **Completion**:
     - Configuration of the Security Onion VM is complete.
 
+
+## Part 3: Configuring Kali Linux
+
+1. **Setup Objective**: Use Kali Linux as an attack machine to perform offensive actions against the Domain Controller and other machines.
+
+2. **Download Kali Linux ISO**:
+    - Download the Kali Linux ISO file.
+
+3. **Load Kali Linux VM**:
+    - Click on the `.vmx` file from the downloaded Kali folder to load the default Kali image in VMware.
+
+4. **Pre-Power On Configuration**:
+    1. Change the Network Adapter to Vmnet2.
+    2. Set Memory to 4GB.
+
+5. **Power On and Initial Setup**:
+    1. Power on the Kali machine and use the default credentials.
+    2. Change the default password to a more secure one using:
+        ```sh
+        passwd
+        ```
+
+6. **Completion**:
+    - The Kali machine is now ready for use.
+
+
