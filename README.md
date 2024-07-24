@@ -10,7 +10,7 @@ In this project I have used VMWare as the hypervisor for the host computer. Pfse
 
 ![image](https://github.com/user-attachments/assets/8406140f-6445-4ae7-a803-72a7c5e3d1dc)
 
-_Reference: HomeLab Network Design & Topology_
+HomeLab Network Design & Topology_
 
 
 
