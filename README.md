@@ -139,7 +139,7 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     - Configuration of the Security Onion VM is complete.
 
 
-## Part 3: Configuring Kali Linux
+### Part 3: Configuring Kali Linux
 
 1. **Setup Objective**: Use Kali Linux as an attack machine to perform offensive actions against the Domain Controller and other machines.
 
@@ -162,5 +162,48 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
 
 6. **Completion**:
     - The Kali machine is now ready for use.
+  
+
+### Part 4: pfSense Interfaces and Rules
+
+1. **Objective**: Access the pfSense WebConfigurator to make changes to interfaces and firewall rules.
+
+2. **Access pfSense WebConfigurator**:
+    1. Navigate to `192.168.1.1` in a the kali machine.
+    2. Select “Advanced…” and accept the risk to continue.
+    3. Sign in with default credentials: `admin` & `pfsense`.
+
+3. **Wizard Setup**:
+    1. Navigate through the Wizard to Step 2 of 9.
+    2. Add `8.8.8.8` as Primary DNS Server and `4.4.4.4` as Secondary DNS Server.
+    3. Click Next.
+    4. At Step 3 of 9, choose your Timezone and click Next.
+    5. At Step 4 of 9, untick the last two options.
+    6. At Step 5 of 9, click Next.
+    7. At Step 6 of 9, set a new Admin Password and click Next.
+    8. At Step 7 of 9, click Reload and Finish.
+
+4. **Interface Configuration**:
+    1. Click on Interfaces and select LAN.
+    2. Change the description to "Kali" and click Save.
+    3. If an error occurs, use the provided troubleshooting article.
+    4. Configure the rest of the interfaces as needed.
+    5. For OPT3, ensure to enable the interface.
+
+5. **Bridges Configuration**:
+    1. In Interfaces Assignment, select Bridges and click Add.
+    2. Select "VictimNetwork" as the Member Interface.
+    3. Select Display Advanced and choose "SPANPORT" under Advanced Configuration for Span Port.
+    4. Scroll down and click Save.
+
+6. **Firewall Rules Configuration**:
+    1. Navigate to Firewall > Rules.
+    2. Click the Add button with the downward arrow.
+    3. Under "edit Firewall Rule," select Protocol as ANY.
+    4. Scroll down and click Save.
+
+7. **Completion**:
+    - The majority of the firewall configuration needed for pfSense is complete.
+
 
 
