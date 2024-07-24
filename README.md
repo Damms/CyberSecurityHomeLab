@@ -37,13 +37,19 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
 1. **Setup Objective**: Configure pfSense as a firewall for segmenting the private homelab network, accessible only from the Kali Linux machine.
 
 2. **Download pfSense ISO**:
-    - Download the pfSense Community Edition ISO file.
+    - [Download the pfSense Community Edition ISO file](https://www.pfsense.org/download/).
 
 3. **Create a New Virtual Machine in VMware Workstation**:
     1. Click “Create a New Virtual Machine” on the VMware Workstation Homescreen.
     2. Select “Typical (recommended)” and click Next.
-    3. Click “Browse” and locate the pfSense ISO file.
-    4. Click Next.
+
+       ![image](https://github.com/user-attachments/assets/47513db8-17a2-41eb-812b-f19b90078df0)
+
+    4. Click “Browse” and locate the pfSense ISO file.
+
+       ![image](https://github.com/user-attachments/assets/24d45a5b-56aa-483b-b8c7-16b99332df67)
+
+    6. Click Next.
 
 4. **Name and Disk Configuration**:
     1. Rename the Virtual Machine to “pfsense”.
