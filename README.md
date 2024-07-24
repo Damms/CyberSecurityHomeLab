@@ -394,4 +394,34 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
         - Open a browser and navigate to `http://splunk:8000`.
         - Log in with the configured username and password.
 
+### Part 9: Installing Universal Forwarder on Windows Server
+
+1. **Objective**: Install the Splunk Universal Forwarder on a Windows Server to log activities on endpoints.
+
+2. **Network Setup**:
+    - Add the Vmnet6 network adapters to the Splunk adapter.
+
+3. **Configure Receiving on Splunk Server**:
+    1. Navigate to `Settings >> Forwarding and Receiving >> New Receiving Port`.
+    2. Enter port `9997` and save.
+
+4. **Create Index on Splunk Server**:
+    1. Navigate to `Settings >> Indexes >> New index`.
+    2. Name the index `wineventlog` and save.
+
+5. **Install Universal Forwarder on Windows Server**:
+    1. Download the Universal Forwarder.
+    2. Run the installation:
+        - Accept the License Agreement and click Next.
+        - Create a preferred username and password.
+        - Enter the IP Address of your Splunk server and the default ports (8089 & 9997).
+        - Complete the installation.
+
+6. **Add Data in Splunk**:
+    1. Navigate to `Settings >> Add Data`.
+    2. Select "Forward".
+    3. Select the Domain Controller (Windows Server).
+    4. Enter a Server Class Name (e.g., "Domain Controller") and click Next.
+    5. Select Local Event Logs and choose your desired event logs.
+    6. Select `wineventlog` as the index, review the configuration, and submit.
 
