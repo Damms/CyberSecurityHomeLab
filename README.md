@@ -77,4 +77,64 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     - Complete the remaining configuration via the Kali machine through the WebConfigurator.
 
 
+### Part 2: Configuring Security Onion
+
+1. **Setup Objective**: All-in-one IDS, Security Monitoring, and Log Management solution.
+
+2. **Download Security Onion ISO**:
+    - Download the Security Onion ISO file.
+
+3. **Create a New Virtual Machine in VMware Workstation**:
+    1. Select Typical installation and click Next.
+    2. Choose Installer disc image file and locate the SO ISO file.
+    3. Click Next.
+
+4. **Virtual Machine Configuration**:
+    1. Choose Linux, CentOS 7 64-Bit and click Next.
+    2. Specify virtual machine name and click Next.
+    3. Set disk size (minimum 200GB) and store as a single file.
+    4. Click Next.
+
+5. **Hardware Customization**:
+    1. Click “Customize Hardware”.
+    2. Set memory to 4-32GB.
+    3. Add two Network Adapters and assign them to Vmnet 4 & Vmnet 5.
+    4. Click “Finish”.
+
+6. **Initial Security Onion Configuration**:
+    1. Power on the virtual machine and click Enter when prompted.
+    2. Type “yes” when prompted.
+    3. Set a username & password.
+    4. After reboot, enter the username & password.
+    5. Select “Yes” and click Enter.
+
+7. **Setup Options**:
+    1. Select the EVAL option.
+    2. Type “AGREE”.
+    3. Select “Standard”.
+    4. Set a hostname and a short description.
+    5. Select ens33 as the management interface and set addressing to DHCP.
+    6. Follow prompts: Select “YES”, “OK”, “Direct”, and ens35 as the Monitor Interface.
+    7. Select “Automatic” for the OS patch schedule.
+    8. Accept default home network IP.
+    9. Accept all defaults.
+    10. Enter an email address and password for the admin account.
+    11. Select “IP”.
+    12. Select “Yes” for the NTP server and accept defaults.
+    13. Take note of final settings, especially the IP address for web access.
+    14. Select “Yes”.
+
+8. **Post-Installation Access**:
+    1. Configure an external Ubuntu Desktop.
+    2. Download and install Ubuntu Desktop.
+    3. Run `ifconfig` on the Ubuntu Machine and note its IP Address.
+    4. On Security Onion, run:
+        ```sh
+        sudo so-allow
+        ```
+    5. Enter the Ubuntu Desktop IP Address to create a firewall rule for web access.
+    6. Navigate to the Security Onion IP Address on the Ubuntu Desktop.
+
+9. **Completion**:
+    - Configuration of the Security Onion VM is complete.
 
