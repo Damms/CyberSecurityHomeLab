@@ -206,4 +206,71 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     - The majority of the firewall configuration needed for pfSense is complete.
 
 
+### Part 5: Configuring Windows Server as a Domain Controller
+
+1. **Objective**: Set up an Active Directory domain with a Windows 2019 Server as the Domain Controller and 2 Windows 10 machines, using The Cyber Mentor’s YouTube guide.
+
+2. **Downloads**:
+    - Download the Windows 2019 Server Evaluation Copy.
+    - Download the Windows 10 Evaluation Copy.
+
+3. **Windows Server Installation**:
+    1. Install Windows Server in VMware with defaults.
+    2. Skip the product key step by clicking Next.
+    3. At the end of installation, change the Network Adapter to Vmnet3.
+    4. Uncheck “Power on this virtual machine after creation”.
+    5. Edit virtual machine settings and remove the Floppy drive.
+    6. Power on the Virtual Machine and press any key.
+    7. Click Next and Install Now.
+    8. Select Windows Server 2019 Standard Evaluation (Desktop Experience).
+    9. Accept License Terms and choose Custom Install.
+    10. Click New, Apply, OK, and Next.
+    11. Create a password after installation.
+    12. Rename the Domain Controller:
+        - Navigate to Settings > Search for "pc name" > Rename PC > Restart Now.
+
+4. **Active Directory Domain Services Setup**:
+    1. On Server Manager Dashboard, click Manage > Add Roles and Features.
+    2. Click Next until Server Roles menu.
+    3. Select Active Directory Domain Services and Add Features.
+    4. Continue clicking Next until Confirmation menu, then click Install.
+    5. Click Close after installation.
+    6. Click the flag with the yellow caution triangle:
+        - Select “Promote this server to a domain controller”.
+        - Add a new forest and specify a domain name.
+        - Set a password and click Next until Prerequisites Check Menu.
+        - Click Install and wait for reboot.
+    7. Log back in after reboot.
+    8. On Server Manager, click Manage > Add Roles & Features.
+    9. Click Next until Server Roles.
+    10. Select Active Directory Certificate Services and Add Features.
+    11. Click Next until Confirmation menu.
+    12. Check “Restart the destination server automatically if required”, select Yes, and Install.
+    13. Click Close after installation.
+    14. Click the flag with the yellow caution triangle:
+        - Select “Configure Active Directory Certificate Services on the destination server”.
+        - Click Next on Credentials.
+        - Check Certification Authority on Role Services menu.
+        - Click Next until Validity period menu and set it to 99 years.
+        - Click Next until Confirmation menu, then select Configure.
+    15. Manually restart the server for settings to take effect.
+
+5. **User Creation**:
+    1. In Server Manager, select Tools > Active Directory Users and Computers.
+    2. Navigate to your Domain Name (DAMMS.local) > Users.
+    3. Right-click > New > User:
+        - Enter First, Last, and User logon name.
+        - Set a password that never expires and select Finish.
+    4. Right-click the created user, select Copy, and create another user:
+        - Enter a preferred logon name and set a password that never expires.
+
+6. **Firewall Configuration**:
+    1. Search for “Windows Defender Firewall”.
+    2. Turn off the firewall for all networks.
+
+7. **Set pfSense as Default Gateway**:
+    1. Navigate to Control Panel > Network and Internet > Network Connections.
+    2. Enter the following configuration to use pfSense as the default gateway.
+
+
 
