@@ -311,5 +311,30 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     - The Windows 10 desktops are now configured and added to the Active Directory domain.
 
 
+### Part 7: Joining the PCs to the Domain
+
+1. **Network Adapter Settings**:
+    1. Navigate to Network Adapter settings.
+    2. Right-click on Ethernet0 and select properties.
+    3. Select IPV4.
+    4. Add an IP Address (192.168.2.21) and use 192.168.2.1 as the default gateway.
+    5. Use 192.168.2.10 (VictimsNetwork) as the DNS Server.
+
+2. **Join the Device to the Domain**:
+    1. Search “domain” and select Access work or school.
+    2. Select Connect > Join this device to local Active Directory Domain.
+    3. Enter your domain name (e.g., DAMMS.local).
+
+3. **pfSense Configuration**:
+    1. Navigate to Services > DHCP Server > VICTIMSNETWORK.
+    2. Set DNS Server to the IP of your domain controller (192.168.2.10).
+    3. Under Other Options, set Domain Name to the domain name (e.g., DAMMS.local).
+
+4. **Domain Join Process**:
+    1. Enter the Username: Administrator and the password of your DC.
+    2. Select Skip.
+    3. Restart the PC.
+    4. Repeat the process for the second machine.
+
 
 
