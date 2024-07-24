@@ -336,5 +336,62 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     3. Restart the PC.
     4. Repeat the process for the second machine.
 
+### Part 8: Installing Splunk on a Ubuntu Server
+
+1. **Overview**:
+    - Splunk is a widely used SIEM in cybersecurity for aggregating logs and datasets from various sources for easy searching, parsing, and indexing.
+    - Recommended resources: [Splunk Fundamentals 1](https://www.splunk.com) and [Splunk Core Certified User Certification](https://www.splunk.com).
+
+2. **Download and Install Ubuntu Server**:
+    1. **Download**: [Ubuntu Server](https://ubuntu.com/download/server).
+    2. **Create Virtual Machine**:
+        - Use default settings.
+        - Before powering on, remove the CD/DVD drive (autoinst.iso) and Floppy drive (autoinst.flp) in Virtual Machine Settings.
+    3. **Install Ubuntu Server**:
+        - Use default settings.
+        - Create a profile.
+        - Optional: Install OpenSSH server and any additional services.
+        - Remove the CD (ISO) during installation when prompted, then reboot the VM.
+
+3. **Post-Installation Options**:
+    - Access via SSH using AnalystVM.
+    - Install a GUI (Ubuntu Desktop) on the Ubuntu Server.
+
+4. **Install GUI on Ubuntu Server**:
+    1. **Install tasksel**:
+        ```sh
+        sudo apt install tasksel
+        ```
+    2. **Install Ubuntu Desktop GUI**:
+        ```sh
+        sudo tasksel install ubuntu-desktop
+        ```
+    3. **Reboot the VM**:
+        ```sh
+        reboot
+        ```
+
+5. **Installing Splunk**:
+    1. **Navigate to Splunk.com**:
+        - Click on “Free Splunk”.
+        - Create an account or log in.
+        - Under “Splunk Core Products” > Splunk Enterprise > Download Free 60-Day Trial.
+        - Select the Linux package and download the .tgz file.
+    2. **Open Terminal**:
+        - Navigate to the downloads directory.
+        - Untar the file:
+        ```sh
+        tar -xvf splunk-<version>.tgz
+        ```
+    3. **Start Splunk**:
+        - Navigate to the `~/splunk/bin` directory.
+        - Start Splunk instance:
+        ```sh
+        ./splunk start
+        ```
+        - Set an admin username and password.
+    4. **Access Splunk**:
+        - Open a browser and navigate to `http://splunk:8000`.
+        - Log in with the configured username and password.
 
 
