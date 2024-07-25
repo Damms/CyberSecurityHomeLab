@@ -164,20 +164,24 @@ _OPT4 Interface Config_
 
     4. Set a hostname and a short description.
     5. Select ens33 as the management interface and set addressing to DHCP.
+       
 ![image](https://github.com/user-attachments/assets/67b91dd5-d994-4e4f-b2c7-379c6d73a217)
 
 ![image](https://github.com/user-attachments/assets/8b3167b9-20c8-41b3-b726-4370db13d17e)
     6. Follow prompts: Select “YES”, “OK”, “Direct”, and ens35 as the Monitor Interface.
+
 ![image](https://github.com/user-attachments/assets/087bfd37-365d-4539-8c37-72def9ca328e)
     7. Select “Automatic” for the OS patch schedule.
     8. Accept default home network IP.
     9. Accept all defaults.
     10. Enter an email address and password for the admin account.
     11. Select “IP”.
+
 ![image](https://github.com/user-attachments/assets/c48680a7-56d8-468e-819f-c3fffb604ef3)
     12. Select “Yes” for the NTP server and accept defaults.
     13. Take note of final settings, especially the IP address for web access.
     14. Select “Yes”.
+    
 ![image](https://github.com/user-attachments/assets/62d8916a-17f7-4225-adea-1fb2ecf516f9)
 
 
