@@ -113,19 +113,22 @@ _OPT4 Interface Config_
 1. **Setup Objective**: All-in-one IDS, Security Monitoring, and Log Management solution.
 
 2. **Download Security Onion ISO**:
+   
     - [Download the Security Onion ISO file](https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md).
 
-3. **Create a New Virtual Machine in VMware Workstation**:
+4. **Create a New Virtual Machine in VMware Workstation**:
     1. Select Typical installation and click Next.
     2. Choose Installer disc image file and locate the SO ISO file.
 
-![image](https://github.com/user-attachments/assets/8f9dbc95-1913-438c-acc7-45dcdfb8b183)
+    ![image](https://github.com/user-attachments/assets/8f9dbc95-1913-438c-acc7-45dcdfb8b183)
+
     4. Click Next.
 
 4. **Virtual Machine Configuration**:
     1. Choose Linux, CentOS 7 64-Bit and click Next.
 
-![image](https://github.com/user-attachments/assets/a7991947-24c8-4704-a7ba-31f2ff31b617)
+    ![image](https://github.com/user-attachments/assets/a7991947-24c8-4704-a7ba-31f2ff31b617)
+
     3. Specify virtual machine name and click Next.
     4. Set disk size (minimum 200GB) and store as a single file.
     5. Click Next.
@@ -136,54 +139,62 @@ _OPT4 Interface Config_
     3. Add two Network Adapters and assign them to Vmnet 4 & Vmnet 5.
     4. Click “Finish”.
 
-![image](https://github.com/user-attachments/assets/58008a35-712c-4f9b-bc47-c5a8a702cb6b)
+    ![image](https://github.com/user-attachments/assets/58008a35-712c-4f9b-bc47-c5a8a702cb6b)
 
 
 6. **Initial Security Onion Configuration**:
     1. Power on the virtual machine and click Enter when prompted.
-![image](https://github.com/user-attachments/assets/610ad094-a221-4fb5-9794-ac9e89270ab8)
+
+    ![image](https://github.com/user-attachments/assets/610ad094-a221-4fb5-9794-ac9e89270ab8)
 
     3. Type “yes” when prompted.
-![image](https://github.com/user-attachments/assets/5311ffaf-87d1-4713-96fc-7f8080237ff3)
+       
+    ![image](https://github.com/user-attachments/assets/5311ffaf-87d1-4713-96fc-7f8080237ff3)
 
     5. Set a username & password.
     6. After reboot, enter the username & password.
     7. Select “Yes” and click Enter.
-![image](https://github.com/user-attachments/assets/c105ef74-bda6-4fd6-993b-b4b85739f401)
+       
+    ![image](https://github.com/user-attachments/assets/c105ef74-bda6-4fd6-993b-b4b85739f401)
 
 
 7. **Setup Options**:
-    1. Select the EVAL option.  
-![image](https://github.com/user-attachments/assets/f05d08a7-bdd9-4e0e-ba33-ddde8982bb36)
+    1. Select the EVAL option.
+
+    ![image](https://github.com/user-attachments/assets/f05d08a7-bdd9-4e0e-ba33-ddde8982bb36)
 
     3. Type “AGREE”.
-![image](https://github.com/user-attachments/assets/49a87c23-fa91-486e-9bc4-248506fb7a8b)
 
-    4. Select “Standard”.
+    ![image](https://github.com/user-attachments/assets/49a87c23-fa91-486e-9bc4-248506fb7a8b)
+
+    5. Select “Standard”.
     
-![image](https://github.com/user-attachments/assets/36a6a741-87a1-4c00-aec6-79fdc5bf409d)
+    ![image](https://github.com/user-attachments/assets/36a6a741-87a1-4c00-aec6-79fdc5bf409d)
 
     5. Set a hostname and a short description.
     6. Select ens33 as the management interface and set addressing to DHCP.
        
-![image](https://github.com/user-attachments/assets/67b91dd5-d994-4e4f-b2c7-379c6d73a217)
+    ![image](https://github.com/user-attachments/assets/67b91dd5-d994-4e4f-b2c7-379c6d73a217)
 
-![image](https://github.com/user-attachments/assets/8b3167b9-20c8-41b3-b726-4370db13d17e)
+    ![image](https://github.com/user-attachments/assets/8b3167b9-20c8-41b3-b726-4370db13d17e)
+
     6. Follow prompts: Select “YES”, “OK”, “Direct”, and ens35 as the Monitor Interface.
 
-![image](https://github.com/user-attachments/assets/087bfd37-365d-4539-8c37-72def9ca328e)
+    ![image](https://github.com/user-attachments/assets/087bfd37-365d-4539-8c37-72def9ca328e)
+   
     7. Select “Automatic” for the OS patch schedule.
     8. Accept default home network IP.
     9. Accept all defaults.
     10. Enter an email address and password for the admin account.
     11. Select “IP”.
 
-![image](https://github.com/user-attachments/assets/c48680a7-56d8-468e-819f-c3fffb604ef3)
+    ![image](https://github.com/user-attachments/assets/c48680a7-56d8-468e-819f-c3fffb604ef3)
+
     12. Select “Yes” for the NTP server and accept defaults.
     13. Take note of final settings, especially the IP address for web access.
     14. Select “Yes”.
     
-![image](https://github.com/user-attachments/assets/62d8916a-17f7-4225-adea-1fb2ecf516f9)
+    ![image](https://github.com/user-attachments/assets/62d8916a-17f7-4225-adea-1fb2ecf516f9)
 
 
 8. **Setup Analyst Machine**:
@@ -195,10 +206,11 @@ _OPT4 Interface Config_
         sudo so-allow
         ```
     6. Enter your password then select the anayst role to add
-![image](https://github.com/user-attachments/assets/1c245fa1-435b-449c-93c5-68e430a930a5)
 
-    7. Enter the Ubuntu Desktop IP Address to create a firewall rule for web access.
-    8. Navigate to the Security Onion IP Address on the Ubuntu Desktop to access the web interface
+    ![image](https://github.com/user-attachments/assets/1c245fa1-435b-449c-93c5-68e430a930a5)
+
+    8. Enter the Ubuntu Desktop IP Address to create a firewall rule for web access.
+    9. Navigate to the Security Onion IP Address on the Ubuntu Desktop to access the web interface
 
 9. **Completion**:
     - Configuration of the Security Onion VM is complete.
