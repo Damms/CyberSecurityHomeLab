@@ -13,7 +13,6 @@ In this project I have used VMWare as the hypervisor for the host computer. Pfse
 _HomeLab Network Design & Topology_
 
 
-
 ### Skills Learned
 
 
@@ -30,8 +29,17 @@ _HomeLab Network Design & Topology_
 Powerful host machine with VMWare or alternative hypervisor installed. I recommend the host machine to have at elast 32GB of RAM and 1TB+ of storage.
 
 ## Steps
+1. [Configuring pfSense](#part1)
+2. [Configuring Security Onion](#part2)
+3. [Configuring Kali Linux](#part3)
+4. [pfSense Interfaces and Rules](#part4)
+5. [Configuring Windows Server as a Domain Controller](#part5)
+6. [Configuring Windows 10 Desktop & Adding a User to the AD Domain](#part6)
+7. [Joining the PCs to the Domain](#part7)
+8. [Installing Splunk on a Ubuntu Server](#part8)
+9. [Installing Universal Forwarder on Windows Server](#part9)
 
-
+<a id="part1"></a>
 ### Part 1: Configuring pfSense
 
 1. **Setup Objective**: Configure pfSense as a firewall for segmenting the private homelab network, accessible only from the Kali Linux machine.
@@ -108,6 +116,7 @@ _OPT4 Interface Config_
 ![image](https://github.com/user-attachments/assets/3c4629ed-f831-4014-90b0-c7b99753e575)
 
 
+<a id="part2"></a>
 ### Part 2: Configuring Security Onion
 
 1. **Setup Objective**: All-in-one IDS, Security Monitoring, and Log Management solution.
@@ -213,6 +222,7 @@ _OPT4 Interface Config_
     9. Navigate to the Security Onion IP Address on the Ubuntu Desktop to access the web interface
 
 
+<a id="part3"></a>
 ### Part 3: Configuring Kali Linux
 
 1. **Setup Objective**: Use Kali Linux as an attack machine to perform offensive actions against the Domain Controller and other machines.
@@ -237,6 +247,7 @@ _OPT4 Interface Config_
         ```
   
 
+<a id="part4"></a>
 ### Part 4: pfSense Interfaces and Rules
 
 1. **Objective**: Access the pfSense WebConfigurator to make changes to interfaces and firewall rules.
@@ -301,6 +312,7 @@ _OPT4 Interface Config_
     ![image](https://github.com/user-attachments/assets/d86c3afa-951e-448f-82f6-e5d61d3587e8)
 
 
+<a id="part5"></a>
 ### Part 5: Configuring Windows Server as a Domain Controller
 
 1. **Objective**: Set up an Active Directory domain with a Windows 2019 Server as the Domain Controller and 2 Windows 10 machines, using The Cyber Mentor’s YouTube guide.
@@ -368,6 +380,7 @@ _OPT4 Interface Config_
     2. Enter the following configuration to use pfSense as the default gateway.
 
 
+<a id="part6"></a>
 ### Part 6: Configuring Windows 10 Desktop & Adding a User to the AD Domain
 
 1. **Objective**: Add 2 Windows 10 desktops to the Domain and complete the Active Directory lab. Note: Having 2 desktops is not mandatory; one desktop is sufficient.
@@ -406,6 +419,7 @@ _OPT4 Interface Config_
     - The Windows 10 desktops are now configured and added to the Active Directory domain.
 
 
+<a id="part7"></a>
 ### Part 7: Joining the PCs to the Domain
 
 1. **Network Adapter Settings**:
@@ -431,6 +445,8 @@ _OPT4 Interface Config_
     3. Restart the PC.
     4. Repeat the process for the second machine.
 
+
+<a id="part8"></a>
 ### Part 8: Installing Splunk on a Ubuntu Server
 
 1. **Overview**:
@@ -489,6 +505,8 @@ _OPT4 Interface Config_
         - Open a browser and navigate to `http://splunk:8000`.
         - Log in with the configured username and password.
 
+
+<a id="part9"></a>
 ### Part 9: Installing Universal Forwarder on Windows Server
 
 1. **Objective**: Install the Splunk Universal Forwarder on a Windows Server to log activities on endpoints.
