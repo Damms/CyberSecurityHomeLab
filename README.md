@@ -318,8 +318,8 @@ _OPT4 Interface Config_
 1. **Objective**: Set up an Active Directory domain with a Windows 2019 Server as the Domain Controller and 2 Windows 10 machines, using The Cyber Mentor’s YouTube guide.
 
 2. **Downloads**:
-    - Download the Windows 2019 Server Evaluation Copy.
-    - Download the Windows 10 Evaluation Copy.
+    - Download the [Windows 2019 Server Evaluation Copy](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019).
+    - Download the [Windows 10 Evaluation Copy](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
 
 3. **Windows Server Installation**:
     1. Install Windows Server in VMware with defaults.
@@ -327,19 +327,40 @@ _OPT4 Interface Config_
     3. At the end of installation, change the Network Adapter to Vmnet3.
     4. Uncheck “Power on this virtual machine after creation”.
     5. Edit virtual machine settings and remove the Floppy drive.
+
+    ![image](https://github.com/user-attachments/assets/c8afcf7b-eb5b-48b4-8752-47d094f41fc0)
+
     6. Power on the Virtual Machine and press any key.
     7. Click Next and Install Now.
+
+    ![image](https://github.com/user-attachments/assets/6c3b417c-4d7b-4df9-98c8-3068af19bc57)
+
     8. Select Windows Server 2019 Standard Evaluation (Desktop Experience).
     9. Accept License Terms and choose Custom Install.
+
+    ![image](https://github.com/user-attachments/assets/149b8ff8-84e5-4c8f-a3c2-a4541fa8c982)
+
     10. Click New, Apply, OK, and Next.
     11. Create a password after installation.
+
+    ![image](https://github.com/user-attachments/assets/83a89a65-841f-41f9-9a5b-671455e5df4d)
+
     12. Rename the Domain Controller:
         - Navigate to Settings > Search for "pc name" > Rename PC > Restart Now.
 
+    ![image](https://github.com/user-attachments/assets/77b523db-9d45-48e2-8ac9-3fde337ec6cc)
+
 4. **Active Directory Domain Services Setup**:
     1. On Server Manager Dashboard, click Manage > Add Roles and Features.
+
+    ![image](https://github.com/user-attachments/assets/2a610073-6167-4d12-9230-023bc1e8357c)
+
     2. Click Next until Server Roles menu.
     3. Select Active Directory Domain Services and Add Features.
+
+    ![image](https://github.com/user-attachments/assets/e8e526d4-a401-4496-ba7c-fa6ecf20c82c)
+
+
     4. Continue clicking Next until Confirmation menu, then click Install.
     5. Click Close after installation.
     6. Click the flag with the yellow caution triangle:
@@ -350,7 +371,13 @@ _OPT4 Interface Config_
     7. Log back in after reboot.
     8. On Server Manager, click Manage > Add Roles & Features.
     9. Click Next until Server Roles.
+
+    ![image](https://github.com/user-attachments/assets/3437ecf0-61e0-4431-a5ea-41e06649d619)
+
     10. Select Active Directory Certificate Services and Add Features.
+
+    ![image](https://github.com/user-attachments/assets/e991532a-c4bd-4600-8af6-f3365d5899c5)
+
     11. Click Next until Confirmation menu.
     12. Check “Restart the destination server automatically if required”, select Yes, and Install.
     13. Click Close after installation.
@@ -364,10 +391,19 @@ _OPT4 Interface Config_
 
 5. **User Creation**:
     1. In Server Manager, select Tools > Active Directory Users and Computers.
-    2. Navigate to your Domain Name (DAMMS.local) > Users.
+
+    ![image](https://github.com/user-attachments/assets/7d257f21-cf61-46bf-aafe-6dd203d9d8fd)
+
+    2. Navigate to your Domain Name (PHOB.local) > Users.
     3. Right-click > New > User:
         - Enter First, Last, and User logon name.
+
+        ![image](https://github.com/user-attachments/assets/4b82a014-8383-47d3-b0f8-c0c49b6086f9)
+
         - Set a password that never expires and select Finish.
+        
+        ![image](https://github.com/user-attachments/assets/7f4c778e-17fe-4550-b1f3-36160b6ed71d)
+
     4. Right-click the created user, select Copy, and create another user:
         - Enter a preferred logon name and set a password that never expires.
 
@@ -375,9 +411,14 @@ _OPT4 Interface Config_
     1. Search for “Windows Defender Firewall”.
     2. Turn off the firewall for all networks.
 
+    ![image](https://github.com/user-attachments/assets/29944e03-d52a-4b08-a2c4-bb4dee97dc67)
+
+
 7. **Set pfSense as Default Gateway**:
     1. Navigate to Control Panel > Network and Internet > Network Connections.
     2. Enter the following configuration to use pfSense as the default gateway.
+
+    ![image](https://github.com/user-attachments/assets/6cf13cd7-4498-4b61-96e7-6b7b277686b8)
 
 
 <a id="part6"></a>
@@ -386,7 +427,7 @@ _OPT4 Interface Config_
 1. **Objective**: Add 2 Windows 10 desktops to the Domain and complete the Active Directory lab. Note: Having 2 desktops is not mandatory; one desktop is sufficient.
 
 2. **Download**:
-    - Download the Windows 10 Evaluation Copy.
+    - Download the [Windows 2019 Server Evaluation Copy](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019) & [Windows 10 Evaluation Copy](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
 
 3. **Windows 10 Installation**:
     1. Install Windows 10 in VMware with defaults.
@@ -432,12 +473,12 @@ _OPT4 Interface Config_
 2. **Join the Device to the Domain**:
     1. Search “domain” and select Access work or school.
     2. Select Connect > Join this device to local Active Directory Domain.
-    3. Enter your domain name (e.g., DAMMS.local).
+    3. Enter your domain name (e.g., PHOB.local).
 
 3. **pfSense Configuration**:
     1. Navigate to Services > DHCP Server > VICTIMSNETWORK.
     2. Set DNS Server to the IP of your domain controller (192.168.2.10).
-    3. Under Other Options, set Domain Name to the domain name (e.g., DAMMS.local).
+    3. Under Other Options, set Domain Name to the domain name (e.g., PHOB.local).
 
 4. **Domain Join Process**:
     1. Enter the Username: Administrator and the password of your DC.
