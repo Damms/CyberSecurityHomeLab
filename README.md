@@ -14,7 +14,11 @@ _HomeLab Network Design & Topology_
 
 
 ### Skills Learned
-
+- Virtualization
+- Networking & Segmentation
+- Firewall Rules
+- SIEM Configuration & Data Collection
+- Active Directory Domains, Users and Computers
 
 ### Tools Used
 
