@@ -76,9 +76,11 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     3. Enter option 1 when prompted.
     4. Set VLANS: n
     5. Enter em0, em1, em2, em3, em4 & em5 respectively.
+   
        ![image](https://github.com/user-attachments/assets/8eeaf818-71a3-4534-9741-9408480c517e)
 
     7. Proceed with the configuration: y.
+   
        ![image](https://github.com/user-attachments/assets/0300fd75-9911-4935-830b-1c602b4a8961)
 
 
@@ -88,23 +90,22 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
         - Set IP address: 192.168.1.1 for WebGUI access via Kali Machine.
     3. Configure OPT1, OPT2, and OPT4 interfaces.
     4. Leave OPT3 without an IP for span port traffic monitored by Security Onion.
+  
+_LAN Interface Config_
 
 ![image](https://github.com/user-attachments/assets/61ff9f20-3167-4e36-bed2-172957aa1e48)
 
-_LAN Interface Config_
+_OPT1 Interface Config_
 
 ![image](https://github.com/user-attachments/assets/36c54f48-9c6a-410f-a2fc-c9f3908e96e4)
 
-_OPT1 Interface Config_
+_OPT2 Interface Config_
 
 ![image](https://github.com/user-attachments/assets/2e52ce22-7897-4070-995a-8ca5377d5569)
 
-_OPT2 Interface Config_
-
-![image](https://github.com/user-attachments/assets/3c4629ed-f831-4014-90b0-c7b99753e575)
-
 _OPT4 Interface Config_
 
+![image](https://github.com/user-attachments/assets/3c4629ed-f831-4014-90b0-c7b99753e575)
 
 
 ### Part 2: Configuring Security Onion
