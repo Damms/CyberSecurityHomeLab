@@ -205,15 +205,12 @@ _OPT4 Interface Config_
         ```sh
         sudo so-allow
         ```
-    6. Enter your password then select the anayst role to add
+    6. Enter your password then select the anayst role to add by typing _a_
 
     ![image](https://github.com/user-attachments/assets/1c245fa1-435b-449c-93c5-68e430a930a5)
 
     8. Enter the Ubuntu Desktop IP Address to create a firewall rule for web access.
     9. Navigate to the Security Onion IP Address on the Ubuntu Desktop to access the web interface
-
-9. **Completion**:
-    - Configuration of the Security Onion VM is complete.
 
 
 ### Part 3: Configuring Kali Linux
@@ -221,7 +218,7 @@ _OPT4 Interface Config_
 1. **Setup Objective**: Use Kali Linux as an attack machine to perform offensive actions against the Domain Controller and other machines.
 
 2. **Download Kali Linux ISO**:
-    - Download the Kali Linux ISO file.
+    - [Download the Kali Linux ISO file](https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
 
 3. **Load Kali Linux VM**:
     - Click on the `.vmx` file from the downloaded Kali folder to load the default Kali image in VMware.
@@ -230,15 +227,14 @@ _OPT4 Interface Config_
     1. Change the Network Adapter to Vmnet2.
     2. Set Memory to 4GB.
 
+![image](https://github.com/user-attachments/assets/0a1eb8a0-b5e0-4746-a02c-a4b98fc6be07)
+
 5. **Power On and Initial Setup**:
     1. Power on the Kali machine and use the default credentials.
     2. Change the default password to a more secure one using:
         ```sh
         passwd
         ```
-
-6. **Completion**:
-    - The Kali machine is now ready for use.
   
 
 ### Part 4: pfSense Interfaces and Rules
@@ -247,12 +243,20 @@ _OPT4 Interface Config_
 
 2. **Access pfSense WebConfigurator**:
     1. Navigate to `192.168.1.1` in a the kali machine.
+
+    ![image](https://github.com/user-attachments/assets/53e57e75-5d32-4d91-a666-0d5f982d3a21)
+
     2. Select “Advanced…” and accept the risk to continue.
     3. Sign in with default credentials: `admin` & `pfsense`.
+
+    ![image](https://github.com/user-attachments/assets/30c16295-7e31-4de5-9842-b9bc6e7f2514)
 
 3. **Wizard Setup**:
     1. Navigate through the Wizard to Step 2 of 9.
     2. Add `8.8.8.8` as Primary DNS Server and `4.4.4.4` as Secondary DNS Server.
+
+    ![image](https://github.com/user-attachments/assets/0b3bf167-8dfe-4494-9904-713e098c7b67)
+
     3. Click Next.
     4. At Step 3 of 9, choose your Timezone and click Next.
     5. At Step 4 of 9, untick the last two options.
@@ -265,22 +269,36 @@ _OPT4 Interface Config_
     2. Change the description to "Kali" and click Save.
     3. If an error occurs, use the provided troubleshooting article.
     4. Configure the rest of the interfaces as needed.
-    5. For OPT3, ensure to enable the interface.
 
-5. **Bridges Configuration**:
+    ![image](https://github.com/user-attachments/assets/bf28b63e-249d-43e2-8589-1d1cf40221fa)
+
+    5. For OPT3, ensure to enable the interface like below which we will use to setup span port
+    
+    ![image](https://github.com/user-attachments/assets/8f2ee03c-ca80-4e4b-946f-c44b4eda70aa)
+
+
+6. **Bridges Configuration**:
     1. In Interfaces Assignment, select Bridges and click Add.
+
+    ![image](https://github.com/user-attachments/assets/4badf7fc-67e5-49a4-95c2-0f06f6698cda)
+
     2. Select "VictimNetwork" as the Member Interface.
     3. Select Display Advanced and choose "SPANPORT" under Advanced Configuration for Span Port.
-    4. Scroll down and click Save.
+  
+   ![image](https://github.com/user-attachments/assets/237b167f-4487-4b42-bdea-3b8602c8a6cc)
 
-6. **Firewall Rules Configuration**:
+    5. Scroll down and click Save.
+
+7. **Firewall Rules Configuration**:
     1. Navigate to Firewall > Rules.
+
+    ![image](https://github.com/user-attachments/assets/4f61630b-015c-4102-ae47-d94455f9cb4d)
+
     2. Click the Add button with the downward arrow.
     3. Under "edit Firewall Rule," select Protocol as ANY.
     4. Scroll down and click Save.
 
-7. **Completion**:
-    - The majority of the firewall configuration needed for pfSense is complete.
+    ![image](https://github.com/user-attachments/assets/d86c3afa-951e-448f-82f6-e5d61d3587e8)
 
 
 ### Part 5: Configuring Windows Server as a Domain Controller
