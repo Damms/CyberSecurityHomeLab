@@ -510,12 +510,18 @@ _OPT4 Interface Config_
     1. **Download**: [Ubuntu Server](https://ubuntu.com/download/server).
     2. **Create Virtual Machine**:
         - Use default settings.
+
+        ![image](https://github.com/user-attachments/assets/3ee92649-f1be-42a9-b69a-a10d2968e1b7)
+
         - Before powering on, remove the CD/DVD drive (autoinst.iso) and Floppy drive (autoinst.flp) in Virtual Machine Settings.
     3. **Install Ubuntu Server**:
         - Use default settings.
         - Create a profile.
         - Optional: Install OpenSSH server and any additional services.
         - Remove the CD (ISO) during installation when prompted, then reboot the VM.
+
+![image](https://github.com/user-attachments/assets/01adbbb4-9797-4e28-a9f3-de69038dbc01)
+
 
 3. **Post-Installation Options**:
     - Access via SSH using AnalystVM.
@@ -534,6 +540,8 @@ _OPT4 Interface Config_
         ```sh
         reboot
         ```
+
+    ![image](https://github.com/user-attachments/assets/eaa7f87b-55bd-41d7-87a6-433c441a3d57)
 
 5. **Installing Splunk**:
     1. **Navigate to Splunk.com**:
@@ -566,6 +574,8 @@ _OPT4 Interface Config_
 
 2. **Network Setup**:
     - Add the Vmnet6 network adapters to the Splunk adapter.
+![image](https://github.com/user-attachments/assets/f1f512e8-9a70-49e9-b874-8eeae79bbfbc)
+
 
 3. **Configure Receiving on Splunk Server**:
     1. Navigate to `Settings >> Forwarding and Receiving >> New Receiving Port`.
@@ -579,6 +589,9 @@ _OPT4 Interface Config_
     1. Download the Universal Forwarder.
     2. Run the installation:
         - Accept the License Agreement and click Next.
+        
+        ![image](https://github.com/user-attachments/assets/bf8309e7-1484-4674-824c-ba70901c715b)
+
         - Create a preferred username and password.
         - Enter the IP Address of your Splunk server and the default ports (8089 & 9997).
         - Complete the installation.
@@ -586,6 +599,9 @@ _OPT4 Interface Config_
 6. **Add Data in Splunk**:
     1. Navigate to `Settings >> Add Data`.
     2. Select "Forward".
+
+    ![image](https://github.com/user-attachments/assets/80617b64-2231-460a-9abf-7f59b7368b25)
+
     3. Select the Domain Controller (Windows Server).
     4. Enter a Server Class Name (e.g., "Domain Controller") and click Next.
     5. Select Local Event Logs and choose your desired event logs.
