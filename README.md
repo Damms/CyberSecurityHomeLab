@@ -445,10 +445,16 @@ _OPT4 Interface Config_
         - Select New > Apply > OK > Next.
     2. Configure Windows 10:
         - Select “I don’t have internet”.
+
+        ![image](https://github.com/user-attachments/assets/a58f75aa-1618-4556-a869-a8f44e54d30f)
+
         - Continue with limited setup.
         - Set the first user and password (from the DC configuration).
         - Set security answers.
         - Uncheck all privacy settings and select Accept.
+
+        ![image](https://github.com/user-attachments/assets/e065a50d-40e1-492c-89b5-f0e9574159b6)
+
         - Choose “Not Now” for Cortana.
     3. Set up the second desktop with the second user account credentials using the same configurations.
 
@@ -456,8 +462,7 @@ _OPT4 Interface Config_
     1. Search “pc name” and change the PC Name according to the designated users.
     2. Restart the PC.
 
-6. **Completion**:
-    - The Windows 10 desktops are now configured and added to the Active Directory domain.
+![image](https://github.com/user-attachments/assets/b2f63ed2-b916-4cea-aaf3-a8b48da5be7c)
 
 
 <a id="part7"></a>
@@ -470,10 +475,15 @@ _OPT4 Interface Config_
     4. Add an IP Address (192.168.2.21) and use 192.168.2.1 as the default gateway.
     5. Use 192.168.2.10 (VictimsNetwork) as the DNS Server.
 
+    ![image](https://github.com/user-attachments/assets/53a6f9f4-423e-4479-bfc1-864eb37cc3a2)
+
 2. **Join the Device to the Domain**:
     1. Search “domain” and select Access work or school.
     2. Select Connect > Join this device to local Active Directory Domain.
     3. Enter your domain name (e.g., PHOB.local).
+
+    ![image](https://github.com/user-attachments/assets/4ad1603e-fa7e-4acf-b4bf-5276d4ba9be9)
+
 
 3. **pfSense Configuration**:
     1. Navigate to Services > DHCP Server > VICTIMSNETWORK.
@@ -485,6 +495,8 @@ _OPT4 Interface Config_
     2. Select Skip.
     3. Restart the PC.
     4. Repeat the process for the second machine.
+
+    ![image](https://github.com/user-attachments/assets/5d0421b4-b374-4312-b8b9-73a39e863ba5)
 
 
 <a id="part8"></a>
