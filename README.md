@@ -153,17 +153,18 @@ _OPT4 Interface Config_
 
 
 7. **Setup Options**:
-    1. Select the EVAL option.
+    1. Select the EVAL option.  
 ![image](https://github.com/user-attachments/assets/f05d08a7-bdd9-4e0e-ba33-ddde8982bb36)
 
-    2. Type “AGREE”.
+    3. Type “AGREE”.
 ![image](https://github.com/user-attachments/assets/49a87c23-fa91-486e-9bc4-248506fb7a8b)
 
-    3. Select “Standard”.
+    4. Select “Standard”.
+    
 ![image](https://github.com/user-attachments/assets/36a6a741-87a1-4c00-aec6-79fdc5bf409d)
 
-    4. Set a hostname and a short description.
-    5. Select ens33 as the management interface and set addressing to DHCP.
+    5. Set a hostname and a short description.
+    6. Select ens33 as the management interface and set addressing to DHCP.
        
 ![image](https://github.com/user-attachments/assets/67b91dd5-d994-4e4f-b2c7-379c6d73a217)
 
