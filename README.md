@@ -53,15 +53,22 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
 
 4. **Name and Disk Configuration**:
     1. Rename the Virtual Machine to “pfsense”.
-    2. Click Next.
-    3. Set the disk size to 20GB.
-    4. Ensure “Split virtual disk into multiple files” is selected.
-    5. Click Next.
+   
+   ![image](https://github.com/user-attachments/assets/2bc60a2b-c1a6-4864-b552-138168d67b96)
+
+   
+    3. Click Next.
+    4. Set the disk size to 20GB.
+    5. Ensure “Split virtual disk into multiple files” is selected.
+    6. Click Next.
 
 5. **Hardware Customization**:
     1. Click “Customize Hardware”.
     2. Increase the memory to 2GB.
     3. Add 5 network adapters and map them to a VMnet interface.
+  
+![image](https://github.com/user-attachments/assets/f8117b80-2ac4-460e-b45c-eebf78340971)
+
 
 6. **Initial pfSense Configuration**:
     1. Power on the pfSense machine.
@@ -69,7 +76,11 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     3. Enter option 1 when prompted.
     4. Set VLANS: n
     5. Enter em0, em1, em2, em3, em4 & em5 respectively.
-    6. Proceed with the configuration: y.
+       ![image](https://github.com/user-attachments/assets/8eeaf818-71a3-4534-9741-9408480c517e)
+
+    7. Proceed with the configuration: y.
+       ![image](https://github.com/user-attachments/assets/0300fd75-9911-4935-830b-1c602b4a8961)
+
 
 7. **LAN and OPT Interfaces Setup**:
     1. Enter option 2 for interface assignments.
@@ -78,9 +89,22 @@ Powerful host machine with VMWare or alternative hypervisor installed. I recomme
     3. Configure OPT1, OPT2, and OPT4 interfaces.
     4. Leave OPT3 without an IP for span port traffic monitored by Security Onion.
 
-8. **Completion**:
-    - Finish the configuration on the pfSense VM.
-    - Complete the remaining configuration via the Kali machine through the WebConfigurator.
+![image](https://github.com/user-attachments/assets/61ff9f20-3167-4e36-bed2-172957aa1e48)
+
+_LAN Interface Config_
+
+![image](https://github.com/user-attachments/assets/36c54f48-9c6a-410f-a2fc-c9f3908e96e4)
+
+_OPT1 Interface Config_
+
+![image](https://github.com/user-attachments/assets/2e52ce22-7897-4070-995a-8ca5377d5569)
+
+_OPT2 Interface Config_
+
+![image](https://github.com/user-attachments/assets/3c4629ed-f831-4014-90b0-c7b99753e575)
+
+_OPT4 Interface Config_
+
 
 
 ### Part 2: Configuring Security Onion
