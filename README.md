@@ -120,14 +120,12 @@ _OPT4 Interface Config_
     2. Choose Installer disc image file and locate the SO ISO file.
 
 ![image](https://github.com/user-attachments/assets/8f9dbc95-1913-438c-acc7-45dcdfb8b183)
-
     4. Click Next.
 
 4. **Virtual Machine Configuration**:
     1. Choose Linux, CentOS 7 64-Bit and click Next.
 
 ![image](https://github.com/user-attachments/assets/a7991947-24c8-4704-a7ba-31f2ff31b617)
-
     3. Specify virtual machine name and click Next.
     4. Set disk size (minimum 200GB) and store as a single file.
     5. Click Next.
